@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | SierraLuxe Perfumes</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.8rem;
+        }
+        .footer {
+            background-color: #343a40;
+            color: white;
+            padding: 40px 0;
+            margin-top: 40px;
+        }
+        .price {
+            font-weight: bold;
+            color: #dc3545;
+        }
+        .page-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1608528577891-eb055944f2e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 0;
+            margin-bottom: 40px;
+        }
+        .team-member {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 5px solid #f8f9fa;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .timeline {
+            position: relative;
+            padding: 0;
+            list-style: none;
+        }
+        .timeline:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 2px;
+            margin-left: -1px;
+            background-color: #e9ecef;
+        }
+        .timeline > li {
+            position: relative;
+            margin-bottom: 50px;
+        }
+        .timeline > li:after, .timeline > li:before {
+            content: " ";
+            display: table;
+        }
+        .timeline > li:after {
+            clear: both;
+        }
+        .timeline > li .timeline-panel {
+            float: left;
+            position: relative;
+            width: 46%;
+            padding: 20px;
+            border: 1px solid #d4d4d4;
+            border-radius: 8px;
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+            background-color: #fff;
+        }
+        .timeline > li .timeline-panel:before {
+            position: absolute;
+            top: 26px;
+            right: -15px;
+            display: inline-block;
+            border-top: 15px solid transparent;
+            border-left: 15px solid #ccc;
+            border-right: 0 solid #ccc;
+            border-bottom: 15px solid transparent;
+            content: " ";
+        }
+        .timeline > li .timeline-panel:after {
+            position: absolute;
+            top: 27px;
+            right: -14px;
+            display: inline-block;
+            border-top: 14px solid transparent;
+            border-left: 14px solid #fff;
+            border-right: 0 solid #fff;
+            border-bottom: 14px solid transparent;
+            content: " ";
+        }
+        .timeline > li .timeline-badge {
+            position: absolute;
+            top: 16px;
+            left: 50%;
+            width: 50px;
+            height: 50px;
+            margin-left: -25px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 1.4em;
+            line-height: 50px;
+            color: #fff;
+            background-color: #343a40;
+            z-index: 100;
+        }
+        .timeline > li.timeline-inverted > .timeline-panel {
+            float: right;
+        }
+        .timeline > li.timeline-inverted > .timeline-panel:before {
+            border-left-width: 0;
+            border-right-width: 15px;
+            left: -15px;
+            right: auto;
+        }
+        .timeline > li.timeline-inverted > .timeline-panel:after {
+            border-left-width: 0;
+            border-right-width: 14px;
+            left: -14px;
+            right: auto;
+        }
+        .value-card {
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            background-color: #f8f9fa;
+        }
+        .value-card:hover {
+            transform: translateY(-10px);
+        }
+        .value-card i {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #343a40;
+        }
+        @media (max-width: 767px) {
+            .timeline:before {
+                left: 40px;
+            }
+            .timeline > li .timeline-panel {
+                width: calc(100% - 90px);
+                width: -moz-calc(100% - 90px);
+                width: -webkit-calc(100% - 90px);
+            }
+            .timeline > li .timeline-badge {
+                left: 15px;
+                margin-left: 0;
+                top: 16px;
+            }
+            .timeline > li .timeline-panel {
+                float: right;
+            }
+            .timeline > li .timeline-panel:before {
+                border-left-width: 0;
+                border-right-width: 15px;
+                left: -15px;
+                right: auto;
+            }
+            .timeline > li .timeline-panel:after {
+                border-left-width: 0;
+                border-right-width: 14px;
+                left: -14px;
+                right: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Deployment Banner -->
+    <div class="bg-primary text-white py-2">
+        <div class="container text-center">
+            <span>Want to share this website with a friend? <a href="deploy.html" class="text-white fw-bold text-decoration-underline">Learn how to deploy it <i class="fas fa-arrow-right"></i></a></span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-spray-can-sparkles"></i> SierraLuxe Scents</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="collections.html">Collections</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="d-flex ms-3">
+                    <a href="#" class="btn btn-outline-light me-2"><i class="fas fa-search"></i></a>
+                    <a href="#" class="btn btn-outline-light me-2"><i class="fas fa-user"></i></a>
+                    <a href="#" class="btn btn-outline-light"><i class="fas fa-shopping-cart"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Header -->
+    <section class="page-header text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Our Story</h1>
+            <p class="lead">Discover the passion and craftsmanship behind SierraLuxe Scents</p>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="container my-5">
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <h2>Crafting Memories Through Fragrance</h2>
+                <p class="lead">SierraLuxe Scents was born from a passion for exceptional fragrances and a desire to create scents that evoke emotions and memories.</p>
+                <p>Founded in 2010, our journey began with a simple belief: that fragrance is more than just a scent—it's an experience, a memory, a statement. Our founder, Elena Sierra, traveled the world in search of the finest ingredients and traditional perfume-making techniques, bringing them together to create our signature collections.</p>
+                <p>Today, SierraLuxe Scents stands as a testament to quality, creativity, and the artistry of perfumery. Each fragrance is carefully crafted in our atelier, where modern innovation meets time-honored traditions.</p>
+            </div>
+            <div class="col-lg-6">
+                <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1480&q=80" alt="About SierraLuxe" class="img-fluid rounded shadow">
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Journey Timeline -->
+    <section class="bg-light py-5 my-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Our Journey</h2>
+            <ul class="timeline">
+                <li>
+                    <div class="timeline-badge"><i class="fas fa-star"></i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4>2010</h4>
+                            <h4 class="subheading">Our Humble Beginnings</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p>Elena Sierra founded SierraLuxe Scents with a small collection of handcrafted perfumes in a boutique studio in Sierra Leone.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-badge"><i class="fas fa-flask"></i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4>2013</h4>
+                            <h4 class="subheading">Expansion and Innovation</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p>We opened our first flagship store and expanded our collection to include luxury home fragrances and scented candles.</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-badge"><i class="fas fa-award"></i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4>2016</h4>
+                            <h4 class="subheading">International Recognition</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p>Our signature fragrance "Midnight Rose" won the prestigious International Perfume Award, putting SierraLuxe on the global map.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-badge"><i class="fas fa-globe"></i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4>2019</h4>
+                            <h4 class="subheading">Global Expansion</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p>SierraLuxe Scents expanded to international markets with boutiques in major cities around the world and an enhanced online presence.</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-badge"><i class="fas fa-leaf"></i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4>2022</h4>
+                            <h4 class="subheading">Sustainable Luxury</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p>We launched our eco-friendly collection, combining luxury with sustainability, and committed to environmentally responsible practices.</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Our Values -->
+    <section class="container my-5">
+        <h2 class="text-center mb-5">Our Values</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="value-card text-center">
+                    <i class="fas fa-gem"></i>
+                    <h3>Quality</h3>
+                    <p>We are committed to using only the finest ingredients and maintaining the highest standards in every fragrance we create.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="value-card text-center">
+                    <i class="fas fa-heart"></i>
+                    <h3>Passion</h3>
+                    <p>Our love for perfumery drives us to continuously explore, innovate, and push the boundaries of fragrance creation.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="value-card text-center">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Sustainability</h3>
+                    <p>We believe in responsible luxury, sourcing ingredients ethically and minimizing our environmental impact.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet Our Team -->
+    <section class="bg-light py-5 my-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Meet Our Team</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="team-member">
+                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Elena Sierra">
+                        <h4>Elena Sierra</h4>
+                        <p class="text-muted">Founder & Creative Director</p>
+                        <div class="social-icons">
+                            <a href="#" class="text-dark me-2"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-dark me-2"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="team-member">
+                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Marcus Chen">
+                        <h4>Marcus Chen</h4>
+                        <p class="text-muted">Master Perfumer</p>
+                        <div class="social-icons">
+                            <a href="#" class="text-dark me-2"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-dark me-2"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="team-member">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Sophia Rodriguez">
+                        <h4>Sophia Rodriguez</h4>
+                        <p class="text-muted">Head of Product Development</p>
+                        <div class="social-icons">
+                            <a href="#" class="text-dark me-2"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-dark me-2"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="team-member">
+                        <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="James Wilson">
+                        <h4>James Wilson</h4>
+                        <p class="text-muted">Chief Marketing Officer</p>
+                        <div class="social-icons">
+                            <a href="#" class="text-dark me-2"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-dark me-2"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5><i class="fas fa-spray-can-sparkles"></i> SierraLuxe Scents</h5>
+                    <p>Discover the finest fragrances from around the world. Our curated collection offers premium perfumes for every occasion and preference.</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-4 mb-md-0">
+                    <h5>Shop</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">All Perfumes</a></li>
+                        <li><a href="#" class="text-white">New Arrivals</a></li>
+                        <li><a href="#" class="text-white">Best Sellers</a></li>
+                        <li><a href="#" class="text-white">Gift Sets</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 mb-4 mb-md-0">
+                    <h5>About</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Our Story</a></li>
+                        <li><a href="#" class="text-white">Blog</a></li>
+                        <li><a href="#" class="text-white">Press</a></li>
+                        <li><a href="#" class="text-white">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Newsletter</h5>
+                    <p>Subscribe to receive updates, access to exclusive deals, and more.</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Enter your email" aria-label="Email" aria-describedby="button-addon2">
+                        <button class="btn btn-primary" type="button" id="button-addon2">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2023 SierraLuxe Scents. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">
+                        <a href="#" class="text-white me-3">Privacy Policy</a>
+                        <a href="#" class="text-white me-3">Terms of Service</a>
+                        <a href="#" class="text-white">Contact Us</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

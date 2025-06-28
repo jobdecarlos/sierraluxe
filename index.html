@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SierraLuxe Perfumes | Premium Fragrances</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.8rem;
+        }
+        .footer {
+            background-color: #343a40;
+            color: white;
+            padding: 40px 0;
+            margin-top: 40px;
+        }
+        .price {
+            font-weight: bold;
+            color: #dc3545;
+        }
+        /* Carousel Styles */
+        .carousel-item {
+            transition: transform 1.2s ease-in-out;
+        }
+        .carousel-control-prev, .carousel-control-next {
+            width: 5%;
+        }
+        .carousel-indicators {
+            bottom: -40px;
+        }
+        .carousel-indicators button {
+            background-color: #343a40;
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            margin: 0 5px;
+        }
+        /* Full Screen Carousel */
+        .fullscreen-carousel-section {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            margin-top: -1px; /* Ensure no gap between navbar and carousel */
+        }
+        .fullscreen-carousel-section .carousel {
+            height: 100%;
+        }
+        .fullscreen-carousel-section .carousel-inner,
+        .fullscreen-carousel-section .carousel-item,
+        .fullscreen-carousel-section .row {
+            height: 100%;
+        }
+        .fullscreen-carousel-section .carousel-item img {
+            height: 100vh;
+            object-fit: cover;
+        }
+        .fullscreen-carousel-section .carousel-indicators {
+            bottom: 20px;
+            z-index: 15;
+        }
+        #perfumeCarousel .carousel-indicators {
+            bottom: 20px;
+            position: absolute;
+        }
+        .fullscreen-carousel-section h2 {
+            position: absolute;
+            top: 20px;
+            left: 0;
+            right: 0;
+            z-index: 10;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            margin: 0;
+            font-weight: bold;
+        }
+        /* Testimonial Styles */
+        #testimonialCarousel .card {
+            border: none;
+            transition: transform 0.3s;
+        }
+        #testimonialCarousel .card:hover {
+            transform: translateY(-5px);
+        }
+        #testimonialCarousel .carousel-control-prev-icon,
+        #testimonialCarousel .carousel-control-next-icon {
+            padding: 15px;
+        }
+        @media (max-width: 768px) {
+            .carousel .row {
+                flex-direction: column;
+            }
+            .carousel-item img {
+                height: 300px !important;
+            }
+            #testimonialCarousel .col-md-4:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Deployment Banner -->
+    <div class="bg-primary text-white py-2">
+        <div class="container text-center">
+            <span>Want to share this website with a friend? <a href="deploy.html" class="text-white fw-bold text-decoration-underline">Learn how to deploy it <i class="fas fa-arrow-right"></i></a></span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-spray-can-sparkles"></i> SierraLuxe Scents</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="collections.html">Collections</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="d-flex ms-3">
+                    <a href="#" class="btn btn-outline-light me-2"><i class="fas fa-search"></i></a>
+                    <a href="#" class="btn btn-outline-light me-2"><i class="fas fa-user"></i></a>
+                    <a href="#" class="btn btn-outline-light"><i class="fas fa-shopping-cart"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Perfume Carousel Section -->
+    <section class="fullscreen-carousel-section">
+<!--        <h2 class="text-center">Discover Our Premium Collection</h2>-->
+        <div id="perfumeCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#perfumeCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#perfumeCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#perfumeCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#perfumeCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <div class="row g-0">
+                        <div class="col-md-6">
+                            <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="d-block w-100" alt="Midnight Rose">
+                        </div>
+                        <div class="col-md-6 bg-dark text-white d-flex align-items-center">
+                            <div class="p-5">
+                                <h2 class="fw-bold">Midnight Rose</h2>
+                                <div class="mb-3">
+                                    <span class="badge bg-danger fs-5 mb-2">1,250 SLE</span>
+                                    <div><i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star-half-alt text-warning"></i> 4.8/5</div>
+                                </div>
+                                <p class="lead">A captivating blend of rose, jasmine, and vanilla with woody undertones.</p>
+                                <a href="#" class="btn btn-primary">Shop Now <i class="fas fa-arrow-right ms-2"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="row g-0">
+                        <div class="col-md-6">
+                            <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="d-block w-100" alt="Royal Oud">
+                        </div>
+                        <div class="col-md-6 bg-dark text-white d-flex align-items-center">
+                            <div class="p-5">
+                                <h2 class="fw-bold">Royal Oud</h2>
+                                <div class="mb-3">
+                                    <span class="badge bg-danger fs-5 mb-2">1,750 SLE</span>
+                                    <div><i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> 4.9/5</div>
+                                </div>
+                                <p class="lead">Luxurious and sophisticated with rich notes of oud, sandalwood, and musk.</p>
+                                <a href="#" class="btn btn-primary">Shop Now <i class="fas fa-arrow-right ms-2"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                    <div class="row g-0">
+                        <div class="col-md-6">
+                            <img src="https://images.unsplash.com/photo-1547887538-e3a2f32cb1cc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="d-block w-100" alt="Velvet Noir">
+                        </div>
+                        <div class="col-md-6 bg-dark text-white d-flex align-items-center">
+                            <div class="p-5">
+                                <h2 class="fw-bold">Velvet Noir</h2>
+                                <div class="mb-3">
+                                    <span class="badge bg-danger fs-5 mb-2">1,350 SLE</span>
+                                    <div><i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star-half-alt text-warning"></i> 4.8/5</div>
+                                </div>
+                                <p class="lead">Intense and mysterious with notes of black cherry, almond, and tonka bean.</p>
+                                <a href="#" class="btn btn-primary">Shop Now <i class="fas fa-arrow-right ms-2"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="carousel-item">
+                    <div class="row g-0">
+                        <div class="col-md-6">
+                            <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80" class="d-block w-100" alt="Citrus Splash">
+                        </div>
+                        <div class="col-md-6 bg-dark text-white d-flex align-items-center">
+                            <div class="p-5">
+                                <h2 class="fw-bold">Citrus Splash</h2>
+                                <div class="mb-3">
+                                    <span class="badge bg-danger fs-5 mb-2">890 SLE</span>
+                                    <div><i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star-half-alt text-warning"></i> 4.5/5</div>
+                                </div>
+                                <p class="lead">Refreshing and energizing with zesty lemon, grapefruit, and green tea.</p>
+                                <a href="#" class="btn btn-primary">Shop Now <i class="fas fa-arrow-right ms-2"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#perfumeCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#perfumeCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="container mt-5">
+        <h2 class="text-center mb-5">Featured Perfumes</h2>
+        <div class="row">
+            <!-- Product 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="card-img-top" alt="Perfume 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Midnight Rose</h5>
+                        <p class="card-text">A captivating blend of rose, jasmine, and vanilla with woody undertones.</p>
+                        <p class="price">1,250 SLE</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                <button type="button" class="btn btn-sm btn-primary">Add to Cart</button>
+                            </div>
+                            <small class="text-muted"><i class="fas fa-star text-warning"></i> 4.8/5</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="https://images.unsplash.com/photo-1615368144592-5d7eca1d1613?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="card-img-top" alt="Perfume 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Ocean Breeze</h5>
+                        <p class="card-text">Fresh and invigorating with notes of citrus, sea salt, and amber.</p>
+                        <p class="price">980 SLE</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                <button type="button" class="btn btn-sm btn-primary">Add to Cart</button>
+                            </div>
+                            <small class="text-muted"><i class="fas fa-star text-warning"></i> 4.6/5</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="card-img-top" alt="Perfume 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Royal Oud</h5>
+                        <p class="card-text">Luxurious and sophisticated with rich notes of oud, sandalwood, and musk.</p>
+                        <p class="price">1,750 SLE</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                <button type="button" class="btn btn-sm btn-primary">Add to Cart</button>
+                            </div>
+                            <small class="text-muted"><i class="fas fa-star text-warning"></i> 4.9/5</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="https://images.unsplash.com/photo-1608528577891-eb055944f2e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="card-img-top" alt="Perfume 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Floral Symphony</h5>
+                        <p class="card-text">A delicate bouquet of lily, peony, and freesia with a hint of bergamot.</p>
+                        <p class="price">1,100 SLE</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                <button type="button" class="btn btn-sm btn-primary">Add to Cart</button>
+                            </div>
+                            <small class="text-muted"><i class="fas fa-star text-warning"></i> 4.7/5</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="https://images.unsplash.com/photo-1547887538-e3a2f32cb1cc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="card-img-top" alt="Perfume 5">
+                    <div class="card-body">
+                        <h5 class="card-title">Velvet Noir</h5>
+                        <p class="card-text">Intense and mysterious with notes of black cherry, almond, and tonka bean.</p>
+                        <p class="price">1,350 SLE</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                <button type="button" class="btn btn-sm btn-primary">Add to Cart</button>
+                            </div>
+                            <small class="text-muted"><i class="fas fa-star text-warning"></i> 4.8/5</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80" class="card-img-top" alt="Perfume 6">
+                    <div class="card-body">
+                        <h5 class="card-title">Citrus Splash</h5>
+                        <p class="card-text">Refreshing and energizing with zesty lemon, grapefruit, and green tea.</p>
+                        <p class="price">890 SLE</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                <button type="button" class="btn btn-sm btn-primary">Add to Cart</button>
+                            </div>
+                            <small class="text-muted"><i class="fas fa-star text-warning"></i> 4.5/5</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offer Section -->
+    <section class="bg-light py-5 my-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2>Special Offer</h2>
+                    <p class="lead">Get 20% off on all premium collections</p>
+                    <p>Limited time offer. Use code <span class="badge bg-danger">SCENT20</span> at checkout.</p>
+                    <a href="#" class="btn btn-outline-dark">Shop the Collection</a>
+                </div>
+                <div class="col-md-6">
+                    <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1480&q=80" alt="Special Offer" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="container my-5">
+        <h2 class="text-center mb-4">What Our Customers Say</h2>
+        <div id="testimonialCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            </div>
+            <div class="carousel-inner">
+                <!-- Testimonial Slide 1 -->
+                <div class="carousel-item active">
+                    <div class="row">
+                        <!-- Testimonial 1 -->
+                        <div class="col-md-4 mb-4 mb-md-0">
+                            <div class="card h-100 shadow">
+                                <div class="card-body text-center">
+                                    <img src="https://randomuser.me/api/portraits/women/32.jpg" class="rounded-circle mb-3" width="80" height="80" alt="Sarah Johnson">
+                                    <h5 class="card-title">Sarah Johnson</h5>
+                                    <div class="mb-2">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                    </div>
+                                    <p class="card-text">"Midnight Rose has become my signature scent. I receive compliments every time I wear it. The fragrance lasts all day and the packaging is beautiful!"</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 2 -->
+                        <div class="col-md-4 mb-4 mb-md-0">
+                            <div class="card h-100 shadow">
+                                <div class="card-body text-center">
+                                    <img src="https://randomuser.me/api/portraits/men/45.jpg" class="rounded-circle mb-3" width="80" height="80" alt="David Chen">
+                                    <h5 class="card-title">David Chen</h5>
+                                    <div class="mb-2">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star-half-alt text-warning"></i>
+                                    </div>
+                                    <p class="card-text">"Royal Oud is sophisticated and long-lasting. It's perfect for special occasions and business meetings. SierraLuxe Scents offers exceptional quality."</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 3 -->
+                        <div class="col-md-4">
+                            <div class="card h-100 shadow">
+                                <div class="card-body text-center">
+                                    <img src="https://randomuser.me/api/portraits/women/65.jpg" class="rounded-circle mb-3" width="80" height="80" alt="Maria Rodriguez">
+                                    <h5 class="card-title">Maria Rodriguez</h5>
+                                    <div class="mb-2">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                    </div>
+                                    <p class="card-text">"Citrus Splash is so refreshing and perfect for daily wear. The customer service was excellent and shipping was fast. I'll definitely be ordering again!"</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial Slide 2 -->
+                <div class="carousel-item">
+                    <div class="row">
+                        <!-- Testimonial 4 -->
+                        <div class="col-md-4 mb-4 mb-md-0">
+                            <div class="card h-100 shadow">
+                                <div class="card-body text-center">
+                                    <img src="https://randomuser.me/api/portraits/men/22.jpg" class="rounded-circle mb-3" width="80" height="80" alt="James Wilson">
+                                    <h5 class="card-title">James Wilson</h5>
+                                    <div class="mb-2">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                    </div>
+                                    <p class="card-text">"Velvet Noir has become my go-to evening fragrance. It's sophisticated and unique. I've tried many luxury brands, but SierraLuxe Scents offers the best value."</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 5 -->
+                        <div class="col-md-4 mb-4 mb-md-0">
+                            <div class="card h-100 shadow">
+                                <div class="card-body text-center">
+                                    <img src="https://randomuser.me/api/portraits/women/28.jpg" class="rounded-circle mb-3" width="80" height="80" alt="Aisha Patel">
+                                    <h5 class="card-title">Aisha Patel</h5>
+                                    <div class="mb-2">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star-half-alt text-warning"></i>
+                                    </div>
+                                    <p class="card-text">"Floral Symphony is exactly what I was looking for - delicate yet noticeable. The online shopping experience was seamless and the packaging was beautiful."</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 6 -->
+                        <div class="col-md-4">
+                            <div class="card h-100 shadow">
+                                <div class="card-body text-center">
+                                    <img src="https://randomuser.me/api/portraits/men/36.jpg" class="rounded-circle mb-3" width="80" height="80" alt="Thomas Brown">
+                                    <h5 class="card-title">Thomas Brown</h5>
+                                    <div class="mb-2">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                    </div>
+                                    <p class="card-text">"Ocean Breeze is perfect for my active lifestyle. It's light yet distinctive, and the scent lasts all day. SierraLuxe Scents has earned a loyal customer!"</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5><i class="fas fa-spray-can-sparkles"></i> SierraLuxe Scents</h5>
+                    <p>Discover the finest fragrances from around the world. Our curated collection offers premium perfumes for every occasion and preference.</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-4 mb-md-0">
+                    <h5>Shop</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">All Perfumes</a></li>
+                        <li><a href="#" class="text-white">New Arrivals</a></li>
+                        <li><a href="#" class="text-white">Best Sellers</a></li>
+                        <li><a href="#" class="text-white">Gift Sets</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 mb-4 mb-md-0">
+                    <h5>About</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Our Story</a></li>
+                        <li><a href="#" class="text-white">Blog</a></li>
+                        <li><a href="#" class="text-white">Press</a></li>
+                        <li><a href="#" class="text-white">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Newsletter</h5>
+                    <p>Subscribe to receive updates, access to exclusive deals, and more.</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Enter your email" aria-label="Email" aria-describedby="button-addon2">
+                        <button class="btn btn-primary" type="button" id="button-addon2">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2023 SierraLuxe Scents. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">
+                        <a href="#" class="text-white me-3">Privacy Policy</a>
+                        <a href="#" class="text-white me-3">Terms of Service</a>
+                        <a href="#" class="text-white">Contact Us</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

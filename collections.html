@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections | SierraLuxe Perfumes</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.8rem;
+        }
+        .footer {
+            background-color: #343a40;
+            color: white;
+            padding: 40px 0;
+            margin-top: 40px;
+        }
+        .price {
+            font-weight: bold;
+            color: #dc3545;
+        }
+        .page-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1547887538-e3a2f32cb1cc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 0;
+            margin-bottom: 40px;
+        }
+        .collection-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .collection-card:hover {
+            transform: translateY(-10px);
+        }
+        .collection-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .collection-card:hover img {
+            transform: scale(1.05);
+        }
+        .collection-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            padding: 20px;
+            color: white;
+        }
+        .collection-overlay h3 {
+            margin-bottom: 10px;
+        }
+        .featured-collection {
+            background-color: #f8f9fa;
+            padding: 40px 0;
+            margin: 40px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Deployment Banner -->
+    <div class="bg-primary text-white py-2">
+        <div class="container text-center">
+            <span>Want to share this website with a friend? <a href="deploy.html" class="text-white fw-bold text-decoration-underline">Learn how to deploy it <i class="fas fa-arrow-right"></i></a></span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-spray-can-sparkles"></i> SierraLuxe Scents</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="collections.html">Collections</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="d-flex ms-3">
+                    <a href="#" class="btn btn-outline-light me-2"><i class="fas fa-search"></i></a>
+                    <a href="#" class="btn btn-outline-light me-2"><i class="fas fa-user"></i></a>
+                    <a href="#" class="btn btn-outline-light"><i class="fas fa-shopping-cart"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Collections Header -->
+    <section class="page-header text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Our Exclusive Collections</h1>
+            <p class="lead">Explore our curated fragrance collections for every occasion and preference</p>
+        </div>
+    </section>
+
+    <!-- Featured Collection -->
+    <section class="featured-collection">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <h2 class="mb-3">Luxury Noir Collection</h2>
+                    <p class="lead">Our most exclusive line of premium fragrances</p>
+                    <p>Indulge in the opulence of our Luxury Noir Collection, featuring rich, sophisticated scents crafted from the finest ingredients. Each fragrance tells a story of luxury and refinement, perfect for those special moments when only the best will do.</p>
+                    <a href="#" class="btn btn-dark">Explore Collection</a>
+                </div>
+                <div class="col-md-6">
+                    <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Luxury Noir Collection" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collections Grid -->
+    <section class="container my-5">
+        <h2 class="text-center mb-5">Explore Our Collections</h2>
+        <div class="row">
+            <!-- Collection 1 -->
+            <div class="col-md-4">
+                <div class="collection-card">
+                    <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Floral Collection">
+                    <div class="collection-overlay">
+                        <h3>Floral Collection</h3>
+                        <p>Delicate and romantic fragrances inspired by the world's most beautiful flowers.</p>
+                        <a href="#" class="btn btn-sm btn-light">View Collection</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Collection 2 -->
+            <div class="col-md-4">
+                <div class="collection-card">
+                    <img src="https://images.unsplash.com/photo-1615368144592-5d7eca1d1613?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Fresh Collection">
+                    <div class="collection-overlay">
+                        <h3>Fresh Collection</h3>
+                        <p>Invigorating and energizing scents perfect for everyday wear and active lifestyles.</p>
+                        <a href="#" class="btn btn-sm btn-light">View Collection</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Collection 3 -->
+            <div class="col-md-4">
+                <div class="collection-card">
+                    <img src="https://images.unsplash.com/photo-1547887538-e3a2f32cb1cc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Oriental Collection">
+                    <div class="collection-overlay">
+                        <h3>Oriental Collection</h3>
+                        <p>Rich and exotic fragrances with warm, spicy notes for a touch of mystery.</p>
+                        <a href="#" class="btn btn-sm btn-light">View Collection</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Collection 4 -->
+            <div class="col-md-4">
+                <div class="collection-card">
+                    <img src="https://images.unsplash.com/photo-1608528577891-eb055944f2e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Seasonal Collection">
+                    <div class="collection-overlay">
+                        <h3>Seasonal Collection</h3>
+                        <p>Limited edition fragrances inspired by the unique character of each season.</p>
+                        <a href="#" class="btn btn-sm btn-light">View Collection</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Collection 5 -->
+            <div class="col-md-4">
+                <div class="collection-card">
+                    <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80" alt="Citrus Collection">
+                    <div class="collection-overlay">
+                        <h3>Citrus Collection</h3>
+                        <p>Bright and refreshing fragrances featuring zesty citrus notes for an uplifting experience.</p>
+                        <a href="#" class="btn btn-sm btn-light">View Collection</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Collection 6 -->
+            <div class="col-md-4">
+                <div class="collection-card">
+                    <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1480&q=80" alt="Gift Collection">
+                    <div class="collection-overlay">
+                        <h3>Gift Collection</h3>
+                        <p>Specially curated gift sets perfect for treating yourself or someone special.</p>
+                        <a href="#" class="btn btn-sm btn-light">View Collection</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Exclusive Offer -->
+    <section class="bg-dark text-white py-5 my-5">
+        <div class="container text-center">
+            <h2 class="mb-3">Join Our Collector's Club</h2>
+            <p class="lead mb-4">Get exclusive access to limited edition fragrances and special offers</p>
+            <button class="btn btn-outline-light btn-lg">Sign Up Now</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5><i class="fas fa-spray-can-sparkles"></i> SierraLuxe Scents</h5>
+                    <p>Discover the finest fragrances from around the world. Our curated collection offers premium perfumes for every occasion and preference.</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-4 mb-md-0">
+                    <h5>Shop</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">All Perfumes</a></li>
+                        <li><a href="#" class="text-white">New Arrivals</a></li>
+                        <li><a href="#" class="text-white">Best Sellers</a></li>
+                        <li><a href="#" class="text-white">Gift Sets</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 mb-4 mb-md-0">
+                    <h5>About</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Our Story</a></li>
+                        <li><a href="#" class="text-white">Blog</a></li>
+                        <li><a href="#" class="text-white">Press</a></li>
+                        <li><a href="#" class="text-white">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Newsletter</h5>
+                    <p>Subscribe to receive updates, access to exclusive deals, and more.</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Enter your email" aria-label="Email" aria-describedby="button-addon2">
+                        <button class="btn btn-primary" type="button" id="button-addon2">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2023 SierraLuxe Scents. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">
+                        <a href="#" class="text-white me-3">Privacy Policy</a>
+                        <a href="#" class="text-white me-3">Terms of Service</a>
+                        <a href="#" class="text-white">Contact Us</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
